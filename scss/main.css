@@ -9,7 +9,10 @@ img {vertical-align: middle;}
   margin: auto;
 }
 
-
+.categoryButton {
+  background-color:#ff1a2c;
+  color:white;
+}
 
 /* The dots/bullets/indicators */
 .dot {
