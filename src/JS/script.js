@@ -45,7 +45,7 @@ let products = [
   },
   {
     name: "Tomato - Local, Organically Grown, 500 gm",
-    imageURL: "../../static/images/products/fruit-n-veg/capsicum-green.jpg",
+    imageURL: "../../static/images/products/fruit-n-veg/tomato.jpg",
     description:
       "Fresho brings to you an exquisite range of locally grown organic tomatoes, which are now available at bigbasket. These organic tomatoes are free from harmful pesticides and insecticides.",
     price: 12,
@@ -132,7 +132,7 @@ let products = [
   },
   {
     name: "Coca Cola Soft Drink, 2x1.75 L",
-    imageURL: "../../static/images/products/beverages/bournvita.jpg",
+    imageURL: "../../static/images/products/beverages/coke.jpg",
     description:
       "Cadbury Bournvita is a delicious chocolate health drink which is enriched with Vitamin (D,B2,B9,B12). It combines the great taste of chocolate, and goodness of essential nutrients that aid growth and development.",
     price: 150,
