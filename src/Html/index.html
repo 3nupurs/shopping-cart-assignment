@@ -66,8 +66,9 @@
         <img src="../../static/images/offers/offer5.jpg" style="width: 100%" />
       </div>
 
-      <a class="prev" onclick="plusSlides(-1)">PREV</a>
-      <a class="next" onclick="plusSlides(1)">NEXT</a>
+      <!--    /* Code for change of slide on Button click */
+        <a class="prev" onclick="plusSlides(-1)">PREV</a>
+      <a class="next" onclick="plusSlides(1)">NEXT</a> -->
     </div>
     <br />
 
@@ -80,36 +81,53 @@
     </div>
 
     <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
 
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
+let slideIndex = 0;
+showSlides();
 
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides fade");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
 
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
+//      /* Code for change of slide on Button click */
+      // var slideIndex = 1;
+      // showSlides(slideIndex);
+
+      // function plusSlides(n) {
+      //   showSlides((slideIndex += n));
+      // }
+
+      // function currentSlide(n) {
+      //   showSlides((slideIndex = n));
+      // }
+
+      // function showSlides(n) {
+      //   var i;
+      //   var slides = document.getElementsByClassName("mySlides");
+      //   var dots = document.getElementsByClassName("dot");
+      //   if (n > slides.length) {
+      //     slideIndex = 1;
+      //   }
+      //   if (n < 1) {
+      //     slideIndex = slides.length;
+      //   }
+      //   for (i = 0; i < slides.length; i++) {
+      //     slides[i].style.display = "none";
+      //   }
+      //   for (i = 0; i < dots.length; i++) {
+      //     dots[i].className = dots[i].className.replace(" active", "");
+      //   }
+      //   slides[slideIndex - 1].style.display = "block";
+      //   dots[slideIndex - 1].className += " active";
+      // }
     </script>
     <div class="container" id="banners-container"></div>
     <section class="section">
